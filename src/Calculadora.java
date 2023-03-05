@@ -1,7 +1,7 @@
 /**
  * Libreria para calcular las cuatro operaciones básicas
  * suma, resta, multiplicación y división
- * @version 0.1
+ * @version 0.2
  * @author Angela Serantes
  */
 
@@ -28,6 +28,8 @@ public class Calculadora {
      *constante que indica la opción de dividir
      */
     public static final String DIVIDIR = "dividir";
+
+    public static final String RAICES =  "raices";
 
 
     /**
@@ -57,6 +59,14 @@ public class Calculadora {
                     System.out.println("No se puede realizar la operación");
                 }
                 return numero1/numero2;
+            case RAICES:
+                if (numero2 == 2){
+                    return (float) Math.sqrt(numero1);
+                } else if (numero2 == 3) {
+                    return (float) Math.cbrt(numero1);
+                }else{
+                    throw new IllegalArgumentException("No es un índice correcto");
+                }
             default:
                 System.out.println("No se puede realizar la operación");
         }
