@@ -1,7 +1,7 @@
 /**
  * Libreria para calcular las cuatro operaciones básicas
  * suma, resta, multiplicación y división
- * @version 0.1
+ * @version 0.2
  * @author Angela Serantes
  */
 
@@ -29,21 +29,29 @@ public class Calculadora {
      */
     public static final String DIVIDIR = "dividir";
 
+    /**
+     *constante que indica la opción de calcular raíces
+     */
+    public static final String RAICES =  "raices";
+
 
     /**
      * variable operacion que indica la operación a realizar
      */
-    static String  operacion = EntradaSalida.leerOperacion(EntradaSalida.ENTRADA_OPERACION);
+
 
 
     /**
      * método que calcula el resultado de la operación aritmética deseada
      * @return resultado operación
+     * se puede calcular con otro índice siempre y cuando se añadan else-if correspondientes al índice deseado
      */
     public  static float Calcular(){
 
+
         float numero1 = EntradaSalida.numero1;
         float numero2 = EntradaSalida.numero2;
+        String operacion = EntradaSalida.operacion;
 
         switch (operacion){
             case SUMAR:
@@ -57,6 +65,14 @@ public class Calculadora {
                     System.out.println("No se puede realizar la operación");
                 }
                 return numero1/numero2;
+            case RAICES:
+                if (numero2 == 2){
+                    return (float) Math.sqrt(numero1);
+                } else if (numero2 == 3) {
+                    return (float) Math.cbrt(numero1);
+                }else{
+                    throw new IllegalArgumentException("No es un índice correcto");
+                }
             default:
                 System.out.println("No se puede realizar la operación");
         }

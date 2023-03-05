@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Libreria para sacar por dispositivos un mensaje y
  * pedir por consola distintos tipos de datos
- * @version 0.3
+ * @version 0.4
  * @author Angela Serantes
  */
 public class EntradaSalida {
@@ -214,11 +214,11 @@ public class EntradaSalida {
 
                     try {
                         numerosOK = true;
-                        System.out.println("Introduce un número");
+                        System.out.println("Introduce un número o un radicando en caso de querer calcular una raíz");
                         numero1 = operadores.nextFloat();
                         try {
                             numerosOK = true;
-                            System.out.println("Introduce un número");
+                            System.out.println("Introduce un número o un índice en caso de querer calcular una raíz");
                             numero2 = operadores.nextFloat();
                         }catch (Exception e){
                             System.out.println("Introduce un número decimal válido");
@@ -242,12 +242,12 @@ public class EntradaSalida {
      * @return operación ha realizar
      */
 
+    static String operacion=null;
     public static String leerOperacion(int device){
         switch (device) {
             case ENTRADA_OPERACION:
-                String operacion = null;
                 try {
-                    System.out.println("¿Qué operación quieres realizar? " + " sumar, restar, multiplicar o dividir");
+                    System.out.println("¿Qué operación quieres realizar? " + " sumar, restar, multiplicar, dividir, o raices");
                     Scanner datos = new Scanner(System.in);
                     operacion = datos.nextLine();
                 } catch (Exception e) {
@@ -258,6 +258,10 @@ public class EntradaSalida {
 
         return null;
     }
+
+
+
+
 }
 
 

@@ -10,8 +10,10 @@ public class Main {
         if (!isOK_ventana) System.out.println("ERROR VENTANA");
         String nombre = EntradaSalida.entradaString(EntradaSalida.STRING_COMENTARIO);
         int edad =  EntradaSalida.entradaInt(EntradaSalida.INT_COMENTARIO);*/
+        //EntradaSalida.leerFloat(EntradaSalida.ENTRADA_FLOAT);
+        EntradaSalida.leerOperacion(EntradaSalida.ENTRADA_OPERACION);
         EntradaSalida.leerFloat(EntradaSalida.ENTRADA_FLOAT);
-       // EntradaSalida.leerOperacion(EntradaSalida.ENTRADA_OPERACION);
+
 
        /* isOK_consola = EntradaSalida.salida(nombre, EntradaSalida.SALIDA_CONSOLA);
         if (!isOK_consola) System.out.println("ERROR CONSOLA");
