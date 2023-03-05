@@ -1,3 +1,5 @@
+package com.libreria.calcular;
+
 import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -100,13 +102,13 @@ public class EntradaSalida {
 
 
     /**
-     * Salida por ventana o consola del resultado, llama a la función de calcular de la clase Calculadora
+     * Salida por ventana o consola del resultado, llama a la función de calcular de la clase com.libreria.calcular.Calculadora
      * @param device dispositivo de salida<br>consola: SALIDA_CONSOLA<br>ventana:SALIDA_VENTANA
      * @return si es true: correcto si no false
      */
 
     public static boolean salidaFloats(int device){
-        float resultadofinal=Calculadora.Calcular();
+        float resultadofinal= Calculadora.Calcular();
 
         switch (device) {
 

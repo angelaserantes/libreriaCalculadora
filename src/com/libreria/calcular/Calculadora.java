@@ -1,3 +1,5 @@
+package com.libreria.calcular;
+
 /**
  * Libreria para calcular las cuatro operaciones básicas
  * suma, resta, multiplicación y división
