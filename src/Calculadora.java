@@ -35,7 +35,7 @@ public class Calculadora {
     /**
      * variable operacion que indica la operación a realizar
      */
-    static String  operacion = EntradaSalida.leerOperacion(EntradaSalida.ENTRADA_OPERACION);
+
 
 
     /**
@@ -44,8 +44,10 @@ public class Calculadora {
      */
     public  static float Calcular(){
 
+
         float numero1 = EntradaSalida.numero1;
         float numero2 = EntradaSalida.numero2;
+        String operacion = EntradaSalida.operacion;
 
         switch (operacion){
             case SUMAR:
