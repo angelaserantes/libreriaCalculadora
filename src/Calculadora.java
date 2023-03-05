@@ -29,6 +29,9 @@ public class Calculadora {
      */
     public static final String DIVIDIR = "dividir";
 
+    /**
+     *constante que indica la opción de calcular raíces
+     */
     public static final String RAICES =  "raices";
 
 
@@ -41,6 +44,7 @@ public class Calculadora {
     /**
      * método que calcula el resultado de la operación aritmética deseada
      * @return resultado operación
+     * se puede calcular con otro índice siempre y cuando se añadan else-if correspondientes al índice deseado
      */
     public  static float Calcular(){
 
