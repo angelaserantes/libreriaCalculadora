@@ -214,11 +214,11 @@ public class EntradaSalida {
 
                     try {
                         numerosOK = true;
-                        System.out.println("Introduce un número");
+                        System.out.println("Introduce un número o un radicando en caso de querer calcular una raíz");
                         numero1 = operadores.nextFloat();
                         try {
                             numerosOK = true;
-                            System.out.println("Introduce un número");
+                            System.out.println("Introduce un número o un índice en caso de querer calcular una raíz");
                             numero2 = operadores.nextFloat();
                         }catch (Exception e){
                             System.out.println("Introduce un número decimal válido");
@@ -242,10 +242,10 @@ public class EntradaSalida {
      * @return operación ha realizar
      */
 
+    static String operacion=null;
     public static String leerOperacion(int device){
         switch (device) {
             case ENTRADA_OPERACION:
-                String operacion = null;
                 try {
                     System.out.println("¿Qué operación quieres realizar? " + " sumar, restar, multiplicar, dividir, o raices");
                     Scanner datos = new Scanner(System.in);
@@ -260,36 +260,7 @@ public class EntradaSalida {
     }
 
 
-    public static EntradaSalida leerraices(int device) {
-        boolean numerosOK = false;
-        while (!numerosOK){
-            switch (device){
-                case ENTRADA_FLOAT:
-                    Scanner operadores = new Scanner(System.in);
 
-                    try {
-                        numerosOK = true;
-                        System.out.println("Introduce el radicando");
-                        numero1 = operadores.nextFloat();
-                        try {
-                            numerosOK = true;
-                            System.out.println("Introduce el índice");
-                            numero2 = operadores.nextFloat();
-                        }catch (Exception e){
-                            System.out.println("Introduce un número válido");
-                            numerosOK = false;
-                        }
-                    }catch (Exception e){
-                        System.out.println("Introduce un número válido");
-                        numerosOK = false;
-                    }
-
-            }
-
-        }
-
-        return null;
-    }
 
 }
 
